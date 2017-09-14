@@ -45,8 +45,12 @@
       <div class="nav-right">
         <ul class="sign-in">
           <li><i class="fa fa-user"></i></li>
-          <li><a href="signin.html">Sign In</a></li>
-          <li><a href="signup.html">Register</a></li>
+          <li>
+            <%= link_to "Login", new_user_session_path() %>
+          </li>
+          <li>
+            <%= link_to "Register", new_user_registration_path() %>
+          </li>
         </ul>
         <!-- sign-in -->
         <a href="post.html" class="btn">Post Your Job</a>
