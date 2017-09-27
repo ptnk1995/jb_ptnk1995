@@ -5,7 +5,7 @@ module Admin
     # GET /admin/vacancies
     # GET /admin/vacancies.json
     def index
-      @admin_vacancies = Admin::Vacancy.all
+      @admin_vacancies = Vacancy.all
     end
 
     # GET /admin/vacancies/1
@@ -15,7 +15,7 @@ module Admin
 
     # GET /admin/vacancies/new
     def new
-      @admin_vacancy = Admin::Vacancy.new
+      @admin_vacancy = Vacancy.new
     end
 
     # GET /admin/vacancies/1/edit
@@ -25,7 +25,7 @@ module Admin
     # POST /admin/vacancies
     # POST /admin/vacancies.json
     def create
-      @admin_vacancy = Admin::Vacancy.new(admin_vacancy_params)
+      @admin_vacancy = Vacancy.new(admin_vacancy_params)
 
       respond_to do |format|
         if @admin_vacancy.save
@@ -66,7 +66,7 @@ module Admin
 
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_vacancy
-      @admin_vacancy = Admin::Vacancy.find(params[:id])
+      @admin_vacancy = Vacancy.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

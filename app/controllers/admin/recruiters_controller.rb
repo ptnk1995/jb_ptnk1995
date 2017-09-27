@@ -5,7 +5,7 @@ module Admin
     # GET /admin/recruiters
     # GET /admin/recruiters.json
     def index
-      @admin_recruiters = Admin::Recruiter.all
+      @admin_recruiters = Recruiter.all
     end
 
     # GET /admin/recruiters/1
@@ -15,7 +15,7 @@ module Admin
 
     # GET /admin/recruiters/new
     def new
-      @admin_recruiter = Admin::Recruiter.new
+      @admin_recruiter = Recruiter.new
     end
 
     # GET /admin/recruiters/1/edit
@@ -25,7 +25,7 @@ module Admin
     # POST /admin/recruiters
     # POST /admin/recruiters.json
     def create
-      @admin_recruiter = Admin::Recruiter.new(admin_recruiter_params)
+      @admin_recruiter = Recruiter.new(admin_recruiter_params)
 
       respond_to do |format|
         if @admin_recruiter.save
@@ -66,7 +66,7 @@ module Admin
 
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_recruiter
-      @admin_recruiter = Admin::Recruiter.find(params[:id])
+      @admin_recruiter = Recruiter.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

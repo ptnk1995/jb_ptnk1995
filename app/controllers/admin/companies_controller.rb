@@ -5,7 +5,7 @@ module Admin
     # GET /admin/companies
     # GET /admin/companies.json
     def index
-      @admin_companies = Admin::Company.all
+      @admin_companies = Company.all
     end
 
     # GET /admin/companies/1
@@ -15,7 +15,7 @@ module Admin
 
     # GET /admin/companies/new
     def new
-      @admin_company = Admin::Company.new
+      @admin_company = Company.new
     end
 
     # GET /admin/companies/1/edit
@@ -25,7 +25,7 @@ module Admin
     # POST /admin/companies
     # POST /admin/companies.json
     def create
-      @admin_company = Admin::Company.new(admin_company_params)
+      @admin_company = Company.new(admin_company_params)
 
       respond_to do |format|
         if @admin_company.save
@@ -66,7 +66,7 @@ module Admin
 
     # Use callbacks to share common setup or constraints between actions.
     def set_admin_company
-      @admin_company = Admin::Company.find(params[:id])
+      @admin_company = Company.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
