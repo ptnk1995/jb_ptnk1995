@@ -1,0 +1,15 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  history_type: MyString
+  title: MyText
+  start_time: 
+  end_time: 
+  job_seeker_id: 
+
+two:
+  history_type: MyString
+  title: MyText
+  start_time: 
+  end_time: 
+  job_seeker_id: 

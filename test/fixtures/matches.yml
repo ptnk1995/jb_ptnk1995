@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_seeker_id: 
+  vacancy_id: 
+  ratio: 1.5
+
+two:
+  job_seeker_id: 
+  vacancy_id: 
+  ratio: 1.5

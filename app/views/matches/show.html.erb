@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Job seeker:</strong>
+  <%= @match.job_seeker %>
+</p>
+
+<p>
+  <strong>Vacancy:</strong>
+  <%= @match.vacancy %>
+</p>
+
+<p>
+  <strong>Ratio:</strong>
+  <%= @match.ratio %>
+</p>
+
+<%= link_to 'Edit', edit_match_path(@match) %> |
+<%= link_to 'Back', matches_path %>

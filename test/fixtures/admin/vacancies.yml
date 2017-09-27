@@ -1,0 +1,21 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  job_title: MyString
+  job_summary: MyText
+  job_type: MyString
+  min_sal: 1.5
+  max_sal: 1.5
+  deal_line: MyString
+  expected_skills: MyText
+  locations: MyString
+
+two:
+  job_title: MyString
+  job_summary: MyText
+  job_type: MyString
+  min_sal: 1.5
+  max_sal: 1.5
+  deal_line: MyString
+  expected_skills: MyText
+  locations: MyString

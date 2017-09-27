@@ -1,0 +1,31 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing User Emails</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Email</th>
+      <th>Is default</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user_emails.each do |user_email| %>
+      <tr>
+        <td><%= user_email.user %></td>
+        <td><%= user_email.email %></td>
+        <td><%= user_email.is_default %></td>
+        <td><%= link_to 'Show', user_email %></td>
+        <td><%= link_to 'Edit', edit_user_email_path(user_email) %></td>
+        <td><%= link_to 'Destroy', user_email, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New User email', new_user_email_path %>
