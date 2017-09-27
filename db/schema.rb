@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170927034023) do
+ActiveRecord::Schema.define(version: 20170927083946) do
 
   create_table "applications", force: :cascade do |t|
     t.integer  "job_seeker_id", limit: 4
@@ -117,7 +117,10 @@ ActiveRecord::Schema.define(version: 20170927034023) do
     t.string   "locations",       limit: 255
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "recruiter_id",    limit: 4
   end
+
+  add_index "vacancies", ["recruiter_id"], name: "index_vacancies_on_recruiter_id", using: :btree
 
   add_foreign_key "applications", "job_seekers"
   add_foreign_key "applications", "vacancies"
@@ -127,4 +130,5 @@ ActiveRecord::Schema.define(version: 20170927034023) do
   add_foreign_key "matches", "vacancies"
   add_foreign_key "recruiters", "companies"
   add_foreign_key "user_emails", "users"
+  add_foreign_key "vacancies", "recruiters"
 end
