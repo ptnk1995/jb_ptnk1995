@@ -1,0 +1,24 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>User:</strong>
+  <%= @job_seeker.user %>
+</p>
+
+<p>
+  <strong>Skills:</strong>
+  <%= @job_seeker.skills %>
+</p>
+
+<p>
+  <strong>Expected sal:</strong>
+  <%= @job_seeker.expected_sal %>
+</p>
+
+<p>
+  <strong>Expected locations:</strong>
+  <%= @job_seeker.expected_locations %>
+</p>
+
+<%= link_to 'Edit', edit_job_seeker_path(@job_seeker) %> |
+<%= link_to 'Back', job_seekers_path %>

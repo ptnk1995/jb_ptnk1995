@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Contract:</strong>
+  <%= @admin_recruiter.contract_id %>
+</p>
+
+<p>
+  <strong>Password:</strong>
+  <%= @admin_recruiter.password %>
+</p>
+
+<p>
+  <strong>Email:</strong>
+  <%= @admin_recruiter.email %>
+</p>
+
+<p>
+  <strong>Phone:</strong>
+  <%= @admin_recruiter.phone %>
+</p>
+
+<p>
+  <strong>Company:</strong>
+  <%= @admin_recruiter.company %>
+</p>
+
+<%= link_to 'Edit', edit_admin_recruiter_path(@admin_recruiter) %> |
+<%= link_to 'Back', admin_recruiters_path %>

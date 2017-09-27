@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Admin Recruiters</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Contract</th>
+      <th>Password</th>
+      <th>Email</th>
+      <th>Phone</th>
+      <th>Company</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @admin_recruiters.each do |admin_recruiter| %>
+      <tr>
+        <td><%= admin_recruiter.contract_id %></td>
+        <td><%= admin_recruiter.password %></td>
+        <td><%= admin_recruiter.email %></td>
+        <td><%= admin_recruiter.phone %></td>
+        <td><%= admin_recruiter.company %></td>
+        <td><%= link_to 'Show', admin_recruiter %></td>
+        <td><%= link_to 'Edit', edit_admin_recruiter_path(admin_recruiter) %></td>
+        <td><%= link_to 'Destroy', admin_recruiter, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recruiter', new_admin_recruiter_path %>

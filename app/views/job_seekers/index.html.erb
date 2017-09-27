@@ -1,0 +1,33 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Listing Job Seekers</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>User</th>
+      <th>Skills</th>
+      <th>Expected sal</th>
+      <th>Expected locations</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @job_seekers.each do |job_seeker| %>
+      <tr>
+        <td><%= job_seeker.user %></td>
+        <td><%= job_seeker.skills %></td>
+        <td><%= job_seeker.expected_sal %></td>
+        <td><%= job_seeker.expected_locations %></td>
+        <td><%= link_to 'Show', job_seeker %></td>
+        <td><%= link_to 'Edit', edit_job_seeker_path(job_seeker) %></td>
+        <td><%= link_to 'Destroy', job_seeker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Job seeker', new_job_seeker_path %>

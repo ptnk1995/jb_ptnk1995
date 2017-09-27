@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  user: 
+  skills: MyString
+  expected_sal: 1.5
+  expected_locations: MyString
+
+two:
+  user: 
+  skills: MyString
+  expected_sal: 1.5
+  expected_locations: MyString

@@ -1,0 +1,44 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Job title:</strong>
+  <%= @admin_vacancy.job_title %>
+</p>
+
+<p>
+  <strong>Job summary:</strong>
+  <%= @admin_vacancy.job_summary %>
+</p>
+
+<p>
+  <strong>Job type:</strong>
+  <%= @admin_vacancy.job_type %>
+</p>
+
+<p>
+  <strong>Min sal:</strong>
+  <%= @admin_vacancy.min_sal %>
+</p>
+
+<p>
+  <strong>Max sal:</strong>
+  <%= @admin_vacancy.max_sal %>
+</p>
+
+<p>
+  <strong>Deal line:</strong>
+  <%= @admin_vacancy.deal_line %>
+</p>
+
+<p>
+  <strong>Expected skills:</strong>
+  <%= @admin_vacancy.expected_skills %>
+</p>
+
+<p>
+  <strong>Locations:</strong>
+  <%= @admin_vacancy.locations %>
+</p>
+
+<%= link_to 'Edit', edit_admin_vacancy_path(@admin_vacancy) %> |
+<%= link_to 'Back', admin_vacancies_path %>

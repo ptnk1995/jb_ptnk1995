@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>History type:</strong>
+  <%= @history.history_type %>
+</p>
+
+<p>
+  <strong>Title:</strong>
+  <%= @history.title %>
+</p>
+
+<p>
+  <strong>Start time:</strong>
+  <%= @history.start_time %>
+</p>
+
+<p>
+  <strong>End time:</strong>
+  <%= @history.end_time %>
+</p>
+
+<p>
+  <strong>Job seeker:</strong>
+  <%= @history.job_seeker %>
+</p>
+
+<%= link_to 'Edit', edit_history_path(@history) %> |
+<%= link_to 'Back', histories_path %>
