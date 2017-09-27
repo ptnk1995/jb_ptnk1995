@@ -1,3 +1,15 @@
+# == Schema Information
+#
+# Table name: histories
+#
+#  id            :integer          not null, primary key
+#  history_type  :string(255)
+#  title         :text(65535)
+#  created_at    :datetime
+#  updated_at    :datetime
+#  job_seeker_id :integer
+#
+
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
